@@ -115,7 +115,7 @@ def generate_doc_from_each_end_point(
     with open(template_path, "r") as f:
         swagger_base = (
             jinja2_env.from_string(f.read()).render(
-                description=cleaned_description,
+                description=description,
                 version=api_version,
                 title=title,
                 contact=contact,
